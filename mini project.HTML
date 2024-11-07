@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>
+      Murali B | Engineering student .
+    </title>
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header" role="banner" id="top">
+      <nav class="nav row" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Skills</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__text-box row">
+        <div class="header__text">
+          <h1 class="heading-primary">
+            <span class="heading-primary--sub">Hi, my name is</span>
+            <span>Murali B</span>
+            <span class="heading-primary--sub">
+              Engineering student.</span
+            >
+          </h1>
+          <a href="#contact" class="btn btn--pink">Get in touch</a>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <!-- ***** Work ***** -->
+
+      <section class="work" id="work">
+        <div class="row">
+          <h2>My work</h2>
+          <div class="work__boxes">
+            <div class="work__box">
+              <div class="work__text">
+                <h3>Portfolio Template</h3>
+                <p>
+                  This portfolio is my mini project for my internship
+                  In this intern we learned about
+                </p>
+                <ul class="work__list">
+                  <li>RandomForestRegression</li>
+                  <li>AIML</li>
+                  <li>Testing and training</li>
+                  <li>Prediction</li>
+                </ul>
+
+                <a href="#" class="link__text"
+                  >Visit Site <span>&rarr;</span></a
+                >
+              </div>
+              <div class="work__image-box">
+                <img
+                  src="./images/project-1.png"
+                  class="work__image"
+                  alt="Project 1"
+                />
+              </div>
+            </div>
+
+            <div class="work__box">
+              <div class="work__text">
+                <h3>what is aiml</h3>
+                <p>
+                  AIML is an XML dialect for creating natural language software agents .
+                </p>
+                <ul class="work__list">
+                  <li></li>
+                  <li>create chatbots</li>
+                  <li>virtual assistants</li>
+                  <li>Artificial intelligence software</li>
+                </ul>
+
+            <div class="work__box">
+              <div class="work__text">
+                <h3>prediction</h3>
+                <p>
+                  prediction is used to identify the chance to something will happen.
+                </p>
+                <ul class="work__list">
+                  <li>testing training</li>
+                  <li>RandomForestRegression</li>
+                  <li>Flash</li>
+                  <li>dataprocessing</li>
+                </ul>
+
+      <!-- ***** About ***** -->
+
+      <section class="about" id="about">
+        <div class="row">
+          <h2>About Me</h2>
+          <div class="about__content">
+            <div class="about__text">
+              <p>
+                Myself murali babu,3rd year ECE student and am also complete my diploma in ECE in the year 
+                of 2021 
+                am complete my two year apprentice in LucasTVS
+                am more interested in photography
+              </p>
+            </div>
+
+            <div class="about__photo-container">
+              <img
+                class="about__photo"
+                src="./images/syed-ali-hussnain.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ***** Contact ***** -->
+
+    <section class="contact" id="contact">
+      <div class="row">
+        <h2>Get in Touch</h2>
+        <div class="contact__info">
+          <p>
+            for further details contact me through the Email or my whatsapp number, i'll definitely respond .
+          </p>
+          <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Footer ***** -->
+
+    <footer role="contentinfo" class="footer row">
+      <div class="footer__info">
+        <p>&copy; 2020. All rights reserved.</p>
+        <p>
+          Crafted with
+          <img src="./images/heart.svg" class="footer__heart" alt="Heart" /> by
+          Murali B
+        </p>
+      </div>
+    </footer>
+
+    <a href="#top" class="back-to-top">
+      <img
+        src="./images/arrow-up.svg"
+        alt="Back to Top"
+        class="back-to-top__image"
+      />
+    </a>
+
+    <script>
+      const backToTopButton = document.querySelector(".back-to-top");
+      let isBackToTopRendered = false;
+
+      let alterStyles = (isBackToTopRendered) => {
+        backToTopButton.style.visibility = isBackToTopRendered
+          ? "visible"
+          : "hidden";
+        backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
+        backToTopButton.style.transform = isBackToTopRendered
+          ? "scale(1)"
+          : "scale(0)";
+      };
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 800) {
+          isBackToTopRendered = true;
+          alterStyles(isBackToTopRendered);
+        } else {
+          isBackToTopRendered = false;
+          alterStyles(isBackToTopRendered);
+        }
+      });
+    </script>
+  </body>
+</html>
